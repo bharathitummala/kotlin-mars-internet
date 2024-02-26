@@ -16,7 +16,6 @@
  */
 
 package com.example.android.marsrealestate.overview
-
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -49,6 +48,9 @@ class OverviewFragment : Fragment() {
 
         // Giving the binding access to the OverviewViewModel
         binding.viewModel = viewModel
+
+        // Sets the adapter of the photosGrid RecyclerView
+        binding.photosGrid.adapter = PhotoGridAdapter()
 
         setHasOptionsMenu(true)
         return binding.root
